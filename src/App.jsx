@@ -1,5 +1,5 @@
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import Note from "./Note";
 import notes from "./notes";
 
@@ -12,7 +12,6 @@ const App = () => {
     <>
       <Header />
       {someNotes}
-
       <Footer />
     </>
   );
