@@ -10,7 +10,9 @@ const Todo = () => {
   };
 
   const submitTodo = () => {
-    console.log("submitted");
+    if (inputText.trim() === "") {
+      return alert("Please enter a To-do List");
+    }
     setLists((prev) => [...prev, inputText]);
     setInputText("");
   };
@@ -28,8 +30,8 @@ const Todo = () => {
       </div>
       <div>
         <ul>
-          {lists.map((list) => {
-            return <li key={list.id}>{list}</li>;
+          {lists.map((list, index) => {
+            return <li key={index}>{list}</li>;
           })}
         </ul>
       </div>
